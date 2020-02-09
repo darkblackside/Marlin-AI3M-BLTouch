@@ -1,11 +1,11 @@
 # Anycubic i3 Mega Marlin (BLTouch) 1.1.9 by davidramiro & MNieddu91
 
-This is my slightly customized version of the [Marlin Firmware](https://github.com/MarlinFirmware/Marlin), gratefully based on [derhopp's repo](https://github.com/derhopp/Marlin-with-Anycubic-i3-Mega-TFT), [davidramiros's repo](https://github.com/davidramiro/Marlin-AI3M) and [DerDomink's repo](https://github.com/DerDominik/Marlin-AnycubicI3Mega-BLTouch).  
-This version is a simply 1-to-1 copy of [davidramiros's](https://github.com/davidramiro/Marlin-AI3M) with the necessary changes that **BLTouch or any clone can be used.**
+This is my configured version of the [Marlin Firmware](https://github.com/MarlinFirmware/Marlin), gratefully based on [derhopp's repo](https://github.com/derhopp/Marlin-with-Anycubic-i3-Mega-TFT), [davidramiros's repo](https://github.com/davidramiro/Marlin-AI3M), [MNieddu91's repo](https://github.com/MNieddu91/Marlin-AI3M-BLTouch) and [DerDomink's repo](https://github.com/DerDominik/Marlin-AnycubicI3Mega-BLTouch).  
+This version is a simply 1-to-1 copy of [MNieddu91's repo](https://github.com/MNieddu91/Marlin-AI3M-BLTouch) with the necessary changes that **Geeetech BLTouch and the TMC2209 stepper drivers could be used**
 
 Feel free to discuss issues and work with davidramiro and me further optimizing this firmware!
 
-I am running this version on an Anycubic Mega-S (for distinction of the different versions, check [this Thingiverse thread](https://www.thingiverse.com/groups/anycubic-i3-mega/forums/general/topic:27064)).  
+I am running this version on an Anycubic i3 Mega (for distinction of the different versions, check [this Thingiverse thread](https://www.thingiverse.com/groups/anycubic-i3-mega/forums/general/topic:27064)).  
 Basically, this works on every Ultrabase version that has two Z-axis endstops. For i3 Mega with single endstop check [davidramiros's Wiki](https://github.com/davidramiro/Marlin-AI3M/wiki/Customization-&-Compiling#single-z-endstop).   
 By default it is designed to work on i3 Mega. New Mega-S works too, but calibrating your extruder is mandatory since it needs to have increased E-steps, see [davidramiros's Wiki](https://github.com/davidramiro/Marlin-AI3M/wiki/Customization-&-Compiling#mega-s).
 
@@ -31,13 +31,12 @@ I'm working together with davidramiro on this FW and you'll always find the late
 
 ## Are there pre-compiled firmware files?
 
-No!  
-I have decided **NOT** to provide precompiled hex files. Due to various settings which are necessary for the use of a BLTouch, this does not make sense and can only lead to problems.  
-However, it is not difficult to compile the firmware yourself :-)
+Yes! [Here you go](https://github.com/darkblackside/Marlin-AI3M-BLTouch/releases/tag/v19.02.09-installed)
 
-## Which changes are necessary?
 
-**I'll describe the necessary changes for using at least BLTouch in the [Wiki](https://github.com/MNieddu91/Marlin-AI3M-BLTouch/wiki).**
+## Which changes are necessary to compile own firmware?
+
+**Changes described in the [Wiki](https://github.com/MNieddu91/Marlin-AI3M-BLTouch/wiki).**
 
 ### Compile it yourself:
 
