@@ -614,7 +614,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 405 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 94.6 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -793,9 +793,9 @@
  *      O-- FRONT --+
  *    (0,0)
  */
-#define X_PROBE_OFFSET_FROM_EXTRUDER 24  // X offset: -left  +right  [of the nozzle]
-#define Y_PROBE_OFFSET_FROM_EXTRUDER -1  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -4   // Z offset: -below +above  [the nozzle]
+#define X_PROBE_OFFSET_FROM_EXTRUDER 31  // X offset: -left  +right  [of the nozzle]
+#define Y_PROBE_OFFSET_FROM_EXTRUDER -15  // Y offset: -front +behind [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -2.3   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 10
@@ -872,7 +872,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false // set to false for stock drivers or TMC2208 with reversed connectors
+#define INVERT_E0_DIR true // set to false for stock drivers or TMC2208 with reversed connectors
 #define INVERT_E1_DIR true // set to false for stock drivers or TMC2208 with reversed connectors
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -904,8 +904,8 @@
 #define Y_MIN_POS -2
 #define Z_MIN_POS 0
 #define X_MAX_POS 215
-#define Y_MAX_POS 225
-#define Z_MAX_POS 160
+#define Y_MAX_POS 220
+#define Z_MAX_POS 205
 
 /**
  * Software Endstops
@@ -1048,10 +1048,10 @@
 //#define Z_MAX_POS 160
 
   // Set the boundaries for probing (where the probe can reach).
-  #define LEFT_PROBE_BED_POSITION 25 // 0 (min x coordinate) + 24 (sensor spacing to nozzle)
-  #define RIGHT_PROBE_BED_POSITION 204 // 215 (max x coordinate) - 10 (edge)
+  #define LEFT_PROBE_BED_POSITION 35 // 0 (min x coordinate) + 31 (sensor spacing to nozzle)
+  #define RIGHT_PROBE_BED_POSITION 204 // 215 (max x coordinate) - 10 (margin)
   #define FRONT_PROBE_BED_POSITION 10
-  #define BACK_PROBE_BED_POSITION 204
+  #define BACK_PROBE_BED_POSITION 204 // 220 (max y coordinate) - 15 (sensor spacing to nozzle)
 
   // The Z probe minimum outer margin (to validate G29 parameters).
   #define MIN_PROBE_EDGE 10
